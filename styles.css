@@ -1,0 +1,198 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  height: 100px; /* Define the height of the header */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%; /* Make the logo height match the header height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image scales to fit without distortion */
+  margin-right: 10px; /* Space between logo image and text */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 100px; /* Vertically center text with the height of the header */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+marquee {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 1.2em;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: slide 30s linear infinite;
+}
+
+.carousel-track img {
+  width: 50%;
+  height: auto;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  16.66% {
+    transform: translateX(0%);
+  }
+  33.33% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+}
+
+.shop-now {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.shop-now-btn {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.shop-now-btn:hover {
+  background-color: #c0392b;
+}
+
+.welcome-message {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 20px;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.welcome-text {
+  margin-bottom: 15px;
+}
+
+.login-section,
+.create-account-section {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+.login-section h2,
+.create-account-section h2 {
+  margin-bottom: 20px;
+}
+
+.login-section form,
+.create-account-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-section label,
+.create-account-section label {
+  margin: 10px 0 5px;
+}
+
+.login-section input,
+.create-account-section input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.login-btn,
+.create-account-btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover,
+.create-account-btn:hover {
+  background-color: #2980b9;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}

@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  height: 100px; /* Define the height of the header */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%; /* Make the logo height match the header height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image scales to fit without distortion */
+  margin-right: 10px; /* Space between logo image and text */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 100px; /* Vertically center text with the height of the header */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+main {
+  padding: 2em;
+  text-align: center;
+}
+
+#women-categories {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.subcategory {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.subcategory a {
+  display: block;
+  text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.subcategory img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subcategory p {
+  margin-top: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

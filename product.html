@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product-categories</title>
+    <link rel="stylesheet" href="product.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="PRISM Fashion Logo" />
+        <h1>PRISM Fashion</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="about us.html">About</a></li>
+          <li><a href="contact us.html">Contact</a></li>
+          <li><a href="login.html" id="profileLink">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="products">
+      <h2>Our Products</h2>
+      <p>Please select the category you want to purchase...</p>
+      <div class="product-categories">
+        <div class="category">
+          <a href="women.html">
+            <img src="women.png" alt="Women" />
+            <p>Women</p>
+          </a>
+          <div class="subcategory">
+            <a href="gtops.html">Tops</a>
+            <a href="gpants.html">Pants</a>
+            <a href="gethnic.html">Ethnic</a>
+            <a href="gparty-wear.html">Party Wear</a>
+          </div>
+        </div>
+        <div class="category">
+          <a href="men.html">
+            <img src="men.png" alt="Men" />
+            <p>Men</p>
+          </a>
+          <div class="subcategory">
+            <a href="bshirt.html">Shirts</a>
+            <a href="bpants.html">Pants</a>
+            <a href="bethnic.html">Ethnic</a>
+            <a href="bparty-wear.html">Party Wear</a>
+          </div>
+        </div>
+        <div class="category">
+          <a href="kids.html">
+            <img src="kids.png" alt="Kids" />
+            <p>Kids</p>
+          </a>
+          <div class="subcategory">
+            <a href="kfrocks.html">Frocks</a>
+            <a href="kshirts.html">Shirts</a>
+            <a href="kpants.html">Pants</a>
+            <a href="kethnic.html">Ethnic</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const username = localStorage.getItem("username");
+        if (username) {
+          document.getElementById("profileLink").textContent = username
+            .charAt(0)
+            .toUpperCase();
+          document.getElementById("profileLink").href = "profile.html";
+        }
+      });
+    </script>
+    <footer>
+      <p>&copy; 2024 Online Shop</p>
+    </footer>
+  </body>
+</html>

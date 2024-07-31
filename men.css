@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  height: 100px; /* Define the height of the header */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 100%; /* Make the logo height match the header height */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image scales to fit without distortion */
+  margin-right: 10px; /* Space between logo image and text */
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 100px; /* Vertically center text with the height of the header */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  grid-gap: 20px; /* Space between items */
+}
+
+/* Flip card styles */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 400px; /* Fixed height for portrait orientation */
+  perspective: 100000px; /* Gives a 3D effect */
+  position: relative; /* Ensure it is positioned correctly */
+}
+
+.flip-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+}
+
+.flip-card-back {
+  background-color: #f4f4f4;
+  color: #333;
+  transform: rotateY(180deg);
+  text-align: center;
+  padding: 10px;
+}
+
+/* Styling for product images and text */
+.flip-card img {
+  width: auto;
+  height: 100%; /* Make sure image covers the container height */
+  max-height: 300px; /* Adjust as needed for portrait ratio */
+  object-fit: cover; /* Ensure the image covers the container properly */
+}
+
+.flip-card p {
+  margin: 10px 0 0; /* Margin above text */
+  font-size: 1em;
+  border-top: 2px solid #ddd; /* Border between details */
+  padding-top: 10px; /* Padding above the text */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
